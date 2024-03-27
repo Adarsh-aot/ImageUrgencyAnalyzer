@@ -3,6 +3,14 @@ import os
 from classes import StatementUrgencyAnalyzer
 from classes import ImageOCR
 
+
+
+def create_upload_folder():
+    if not os.path.exists("uploads"):
+        os.makedirs("uploads")
+
+
+
 # Function to save the uploaded file
 def save_uploaded_file(uploaded_file):
     with open(os.path.join("uploads", uploaded_file.name), "wb") as f:
@@ -10,6 +18,7 @@ def save_uploaded_file(uploaded_file):
     return os.path.join("uploads", uploaded_file.name)
 
 def main():
+    create_upload_folder()
     st.title("Statement Urgency Analyzer")
 
     st.write("Upload PNG files:")
