@@ -1,5 +1,6 @@
 # Image Urgency Analyzer
 
+
 This project aims to analyze the urgency of statements extracted from images. It provides a simple web interface using Streamlit where users can upload PNG files containing text. The uploaded images are then processed to extract text using OCR (Optical Character Recognition) and analyze the urgency of the extracted statements.
 
 ## Setup Instructions
